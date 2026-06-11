@@ -1,37 +1,37 @@
 import React from 'react';
-import { Layers, Smartphone, Monitor, Code, Lightbulb, Search } from 'lucide-react';
+import { Code, Cpu, BarChart3, Layers, Database, Shield } from 'lucide-react';
 
 export const Services: React.FC = () => {
   const serviceList = [
     {
-      icon: <Layers size={24} />,
-      title: 'UI/UX Design',
-      desc: 'Creating clean, intuitive UI/UX designs that improve usability and enhance user engagement.',
-    },
-    {
-      icon: <Smartphone size={24} />,
-      title: 'Mobile App Design',
-      desc: 'Designing seamless, user-friendly mobile apps that deliver engaging and intuitive experiences.',
-    },
-    {
-      icon: <Monitor size={24} />,
-      title: 'Website Design',
-      desc: 'Creating clean, responsive websites that offer intuitive navigation and enhance user experience.',
-    },
-    {
       icon: <Code size={24} />,
-      title: 'Web Development',
-      desc: 'Building fast, reliable websites with clean code that deliver smooth, user-friendly experiences.',
+      title: 'Full Stack Development',
+      desc: 'Building responsive, end-to-end web applications using React.js, Node.js, and MongoDB.',
     },
     {
-      icon: <Lightbulb size={24} />,
-      title: 'Brand Strategy',
-      desc: 'Developing clear brand strategies that connect with audiences and drive lasting business growth.',
+      icon: <Cpu size={24} />,
+      title: 'AI & Machine Learning',
+      desc: 'Designing and deploying intelligent models and smart systems (like Smart Irrigation).',
     },
     {
-      icon: <Search size={24} />,
-      title: 'SEO & Marketing',
-      desc: 'Optimizing online presence to boost visibility, attract customers, and grow your business effectively.',
+      icon: <BarChart3 size={24} />,
+      title: 'Data Analytics',
+      desc: 'Analyzing data trends and presenting insights using Streamlit, Python, and Jupyter Notebooks.',
+    },
+    {
+      icon: <Layers size={24} />,
+      title: 'Software Engineering',
+      desc: 'Applying algorithms, data structures, and OOP principles to build robust software.',
+    },
+    {
+      icon: <Database size={24} />,
+      title: 'Database Management',
+      desc: 'Designing and optimizing SQL/NoSQL databases for efficient data storage and retrieval.',
+    },
+    {
+      icon: <Shield size={24} />,
+      title: 'Cybersecurity',
+      desc: 'Applying essential security principles to protect web apps and systems from vulnerabilities.',
     },
   ];
 

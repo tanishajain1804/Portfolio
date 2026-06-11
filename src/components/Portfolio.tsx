@@ -10,7 +10,7 @@ import projectSneaker from '../assets/project_sneaker.jpg';
 interface Project {
   title: string;
   category: string;
-  filterTag: 'ui-ux' | 'dev' | 'marketing';
+  filterTag: 'full-stack' | 'ai-analytics' | 'software-dev';
   image: string;
 }
 
@@ -19,35 +19,35 @@ export const Portfolio: React.FC = () => {
 
   const filters = [
     { label: 'All', value: 'all' },
-    { label: 'UI/UX Design', value: 'ui-ux' },
-    { label: 'Development', value: 'dev' },
-    { label: 'Marketing', value: 'marketing' },
+    { label: 'Full Stack', value: 'full-stack' },
+    { label: 'AI & Analytics', value: 'ai-analytics' },
+    { label: 'Software Dev', value: 'software-dev' },
   ];
 
   const projects: Project[] = [
     {
-      title: 'Fashion Website Design',
-      category: 'UI/UX Design',
-      filterTag: 'ui-ux',
-      image: projectFashion,
+      title: 'Virtual Try-On System',
+      category: 'AI & Computer Vision',
+      filterTag: 'ai-analytics',
+      image: projectSneaker,
     },
     {
-      title: 'Marketing Website Design',
-      category: 'Development',
-      filterTag: 'dev',
-      image: projectMarketing,
-    },
-    {
-      title: 'Smart Watch Interface',
-      category: 'UI/UX Design',
-      filterTag: 'ui-ux',
+      title: 'Arquitecto Consultation',
+      category: 'Full Stack (React + OpenAI)',
+      filterTag: 'full-stack',
       image: projectWatch,
     },
     {
-      title: 'Sneaker Brand Portal',
-      category: 'Marketing',
-      filterTag: 'marketing',
-      image: projectSneaker,
+      title: 'E-Commerce Website',
+      category: 'Full Stack Development',
+      filterTag: 'full-stack',
+      image: projectFashion,
+    },
+    {
+      title: 'Personal Portfolio Web App',
+      category: 'Software Development',
+      filterTag: 'software-dev',
+      image: projectMarketing,
     },
   ];
 
@@ -103,10 +103,10 @@ export const Portfolio: React.FC = () => {
                   onError={(e) => {
                     // Fallback to beautiful Unsplash mockups if local assets are missing
                     const fallbacks: Record<string, string> = {
-                      'Fashion Website Design': 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80',
-                      'Marketing Website Design': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-                      'Smart Watch Interface': 'https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=800&q=80',
-                      'Sneaker Brand Portal': 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80',
+                      'Virtual Try-On System': 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80',
+                      'Arquitecto Consultation': 'https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=800&q=80',
+                      'E-Commerce Website': 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80',
+                      'Personal Portfolio Web App': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
                     };
                     (e.target as HTMLImageElement).src = fallbacks[project.title] || 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80';
                   }}

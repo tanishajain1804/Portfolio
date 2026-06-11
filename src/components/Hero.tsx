@@ -30,15 +30,15 @@ export const Hero: React.FC = () => {
             </div>
             
             <h1 className="hero-title">
-              Hey, I'm <span className="gradient-text">Jason</span>,
+              Hey, I'm <span className="gradient-text">Tanisha</span>,
               <br />
-              <span className="hero-role">UI/UX Designer</span>
+              <span className="hero-role">Software Engineer</span>
               <br />
-              Based in <span className="gradient-text">USA.</span>
+              Based in <span className="gradient-text">India.</span>
             </h1>
 
             <p className="hero-desc">
-              Building professional, user-friendly designs that support functionality and boost user engagement. Specializing in high-fidelity prototypes, design systems, and responsive frontends.
+              Computer Science Engineering graduate specializing in solving complex problems, building full-stack web applications, and designing intelligent, data-driven systems.
             </p>
 
             <div className="hero-buttons">
@@ -46,8 +46,8 @@ export const Hero: React.FC = () => {
                 Let's Talk
                 <ArrowRight size={16} />
               </a>
-              <a href="#portfolio" className="btn btn-secondary">
-                My Works
+              <a href="#projects" className="btn btn-secondary">
+                My Projects
               </a>
             </div>
           </div>
@@ -63,7 +63,7 @@ export const Hero: React.FC = () => {
                 <div className="hexagon-inner">
                   <img
                     src={avatarImg}
-                    alt="Jason Portrait"
+                    alt="Tanisha Portrait"
                     className="hexagon-img"
                     onError={(e) => {
                       // Fallback in case image is missing before we generate it
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Circular spinning Download CV overlay badge */}
-            <a href="/jason_cv.pdf" download="Jason_CV.pdf" className="cv-download-badge">
+            <a href="/tanisha_cv.pdf" download="Tanisha_CV.pdf" className="cv-download-badge">
               <div className="cv-badge-inner">
                 <Download size={22} className="cv-icon" />
                 <svg viewBox="0 0 100 100" className="cv-text-svg">
@@ -103,46 +103,46 @@ export const Hero: React.FC = () => {
           <div className="marquee-content">
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>UI/UX Design</span>
+              <span>Full Stack Development</span>
             </div>
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>Web Design</span>
+              <span>Artificial Intelligence</span>
             </div>
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>App Design</span>
+              <span>Data Analytics</span>
             </div>
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>Web Development</span>
+              <span>Software Engineering</span>
             </div>
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>Brand Strategy</span>
+              <span>System Design</span>
             </div>
           </div>
           {/* Group 2 (Duplicate for infinite seamless scrolling) */}
           <div className="marquee-content" aria-hidden="true">
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>UI/UX Design</span>
+              <span>Full Stack Development</span>
             </div>
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>Web Design</span>
+              <span>Artificial Intelligence</span>
             </div>
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>App Design</span>
+              <span>Data Analytics</span>
             </div>
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>Web Development</span>
+              <span>Software Engineering</span>
             </div>
             <div className="marquee-item">
               <Sparkles size={20} className="marquee-star" />
-              <span>Brand Strategy</span>
+              <span>System Design</span>
             </div>
           </div>
         </div>

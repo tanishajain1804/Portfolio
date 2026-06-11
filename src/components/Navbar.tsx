@@ -73,7 +73,7 @@ export const Navbar: React.FC = () => {
         {/* Brand Logo */}
         <a href="#home" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '24px', fontWeight: 800, fontFamily: 'var(--font-heading)' }}>
           <Sparkles size={20} style={{ color: 'var(--accent)' }} />
-          Jason<span style={{ color: 'var(--accent)' }}>.</span>
+          Tanisha<span style={{ color: 'var(--accent)' }}>.</span>
         </a>
 
         {/* Desktop Navigation Link items */}

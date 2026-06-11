@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Github, Linkedin, Figma, Twitter, Sparkles, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, Github, Linkedin, Figma, Twitter, Sparkles, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const [name, setName] = useState('');
@@ -106,13 +106,23 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="contact-details-box">
-              <a href="mailto:hello@jason.design" className="contact-detail-item">
+              <a href="mailto:tanishajain1804@gmail.com" className="contact-detail-item">
                 <div className="contact-icon-wrapper">
                   <Mail size={18} />
                 </div>
                 <div>
                   <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>EMAIL ME</div>
-                  <div style={{ fontWeight: 600 }}>tjain5111@gmail.com</div>
+                  <div style={{ fontWeight: 600 }}>tanishajain1804@gmail.com</div>
+                </div>
+              </a>
+
+              <a href="tel:+919935294326" className="contact-detail-item">
+                <div className="contact-icon-wrapper">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>CALL ME</div>
+                  <div style={{ fontWeight: 600 }}>+91 9935294326</div>
                 </div>
               </a>
               
@@ -122,7 +132,7 @@ export const Footer: React.FC = () => {
                 </div>
                 <div>
                   <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>LOCATION</div>
-                  <div style={{ fontWeight: 600 }}>San Francisco, California</div>
+                  <div style={{ fontWeight: 600 }}>India</div>
                 </div>
               </div>
             </div>
@@ -224,7 +234,7 @@ export const Footer: React.FC = () => {
         <div className="footer-bottom" style={{ marginTop: '80px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '20px', fontWeight: 800, fontFamily: 'var(--font-heading)' }}>
             <Sparkles size={16} style={{ color: 'var(--accent)' }} />
-            Jason<span style={{ color: 'var(--accent)' }}>.</span>
+            Tanisha<span style={{ color: 'var(--accent)' }}>.</span>
           </div>
 
           <div className="footer-bottom-links">
@@ -234,7 +244,7 @@ export const Footer: React.FC = () => {
             <a href="#services">Services</a>
           </div>
 
-          <p>© {new Date().getFullYear()} Jason. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Tanisha. All rights reserved.</p>
         </div>
       </div>
 
