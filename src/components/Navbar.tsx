@@ -6,17 +6,43 @@ export const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
-  // Monitor scrolling to add a border or extra opacity to navbar
+  // Monitor scrolling to add a border/opacity to navbar and detect active section (Scroll Spy)
   useEffect(() => {
     const handleScroll = () => {
+      // 1. Navbar scrolled style
       if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
+
+      // 2. Active Section detection
+      const scrollPosition = window.scrollY + 120; // Offset for header height + padding
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
+      
+      if (isAtBottom) {
+        setActiveSection('services');
+        return;
+      }
+      
+      const sections = ['home', 'about', 'projects', 'services'];
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i]);
+        if (el) {
+          if (scrollPosition >= el.offsetTop) {
+            setActiveSection(sections[i]);
+            break;
+          }
+        }
+      }
     };
+    
     window.addEventListener('scroll', handleScroll);
+    // Initial call to set active section
+    handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -75,7 +101,7 @@ export const Navbar: React.FC = () => {
                 borderRadius: '9999px',
                 transition: 'all 0.3s ease',
               }}
-              className="nav-item-link"
+              className={`nav-item-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
             >
               {link.label}
             </a>
@@ -139,7 +165,10 @@ export const Navbar: React.FC = () => {
                 fontWeight: 600,
                 padding: '8px 0',
                 borderBottom: '1px solid rgba(255,255,255,0.05)',
-                color: 'var(--text-primary)',
+                color: activeSection === link.href.substring(1)
+                  ? (theme === 'light' ? 'var(--accent)' : 'var(--accent-light)')
+                  : 'var(--text-primary)',
+                transition: 'color 0.2s ease',
               }}
             >
               {link.label}
@@ -167,7 +196,7 @@ export const Navbar: React.FC = () => {
         .nav-item-link {
           color: var(--text-secondary);
         }
-        .nav-item-link:hover, .nav-item-link:active {
+        .nav-item-link:hover, .nav-item-link:active, .nav-item-link.active {
           color: var(--bg-primary) !important;
           background-color: var(--text-primary) !important;
           box-shadow: 0 4px 12px var(--accent-glow);

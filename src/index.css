@@ -662,3 +662,9 @@ a {
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+/* Scroll Offset for Fixed Navigation */
+section {
+  scroll-margin-top: 80px;
+}
+
